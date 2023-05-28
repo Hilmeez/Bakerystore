@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cakes</title>
+  <style>
+    body{
+      background-image: url(wood4.jpg);
+    }
+    .cake {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .cake img {
+      display: block;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .cake h2 {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .cake p {
+      margin-top: 5px;
+    }
+
+    .total-price {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .selected-items {
+      margin-top: 20px;
+    }
+
+    .selected-items p {
+      margin: 5px 0;
+    }
+    button {
+    padding: 10px 20px;
+    background-color:orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  </style>
+</head>
+<body>
+  <h1>Cakes</h1>
+  <div class="cake-types">
+    <div class="cake">
+      <img src="choccakes.jpg" alt="Cake 1">
+      <h2>Chocolate Cake</h2>
+      <p class="price">RM 29.99</p>
+    </div>
+    <div class="cake">
+      <img src="strawcakes.jpg" alt="Cake 2">
+      <h2>Strawberry Cake</h2>
+      <p class="price">RM 24.99</p>
+    </div>
+    <div class="cake">
+      <img src="vanillacakes.jpg" alt="Cake 3">
+      <h2>Vanilla Cake</h2>
+      <p class="price">RM 31.99</p>
+    </div>
+  </div>
+
+  <div class="selected-items">
+    <h3>Selected Items:</h3>
+    <div id="selectedItems"></div>
+  </div>
+
+  <button onclick="goBack()">Go Back</button>
+  <button onclick="continueBuying()">Continue Buying</button>
+  <button onclick="proceedToPayment()">Proceed to Payment</button>
+
+  <script>
+    
+  
+
+    function goBack() {
+      
+      window.location.href = "bagel.html";
+    }
+
+    function continueBuying() {
+    
+      window.location.href = "cookies.html";
+    }
+
+    function proceedToPayment() {
+      window.location.href = "payment.html";
+    }
+  </script>
+</body>
+</html>

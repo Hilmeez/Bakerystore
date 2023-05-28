@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bagels</title>
+  <style>
+    body{
+      background-image: url("wood4.jpg");
+    }
+    .bagel {
+      
+      display: inline-block;
+      margin: 30px;
+      text-align: center;
+    }
+
+    .bagel img {
+      
+      display: block;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .bagel h2 {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .bagel p {
+     
+      margin-top: 5px;
+    }
+
+    .total-price {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+  
+    
+    button {
+    padding: 10px 20px;
+    background-color:orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  </style>
+</head>
+
+<body>
+  <h1>Bagels</h1>
+  <div class="bagel-types">
+    <div class="bagel">
+      <img src="blubagels.jpg" alt="Bagel 1">
+      <h2>Blueberry</h2>
+      <p class="price">RM 5.99</p>
+    </div>
+    <div class="bagel">
+      <img src="eggbagels.jpg" alt="Bagel 2">
+      <h2>Egg Bagels</h2>
+      <p class="price">RM 4.49</p>
+    </div>
+    <div class="bagel">
+      <img src="monbegal.jpg" alt="Bagel 3">
+      <h2>Montreal</h2>
+      <p class="price">RM 3.99</p>
+    </div>
+  </div>
+
+  
+  </div>
+  <button onclick="Home()">Home</button>
+  <button onclick="continueBuying()">Continue Buying</button>
+  <button onclick="proceedToPayment()">Proceed to Payment</button>
+
+  <script>
+    function Home() {
+      window.location.href = "home.html";
+    }
+
+    function continueBuying() {
+      window.location.href = "cakes.html";
+    }
+
+    function proceedToPayment() {
+      window.location.href = "payment.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+  <h1>Payment</h1>
+
+  <div class="item">
+    <h3>Bagels</h3>
+    <p>Blueberry Bagel - RM 5.99</p>
+    <label for="blueberryBagelQuantity">Quantity:</label>
+    <input type="number" id="blueberryBagelQuantity" min="0">
+    <p>Egg Bagel - RM 4.49</p>
+    <label for="eggBagelQuantity">Quantity:</label>
+    <input type="number" id="eggBagelQuantity" min="0">
+    <p>Montreal Bagel - RM 3.99</p>
+    <label for="montrealBagelQuantity">Quantity:</label>
+    <input type="number" id="montrealBagelQuantity" min="0">
+  </div>
+
+
+  <div class="item">
+    <h3>Cakes</h3>
+    <p>Chocolate Cake - RM 29.99</p>
+    <label for="chocolateCakeQuantity">Quantity:</label>
+    <input type="number" id="chocolateCakeQuantity" min="0">
+    <p>Vanilla Cake - RM 24.99</p>
+    <label for="vanillaCakeQuantity">Quantity:</label>
+    <input type="number" id="vanillaCakeQuantity" min="0">
+    <p>Strawberry Cake - RM 31.99</p>
+    <label for="strawberryCakeQuantity">Quantity:</label>
+    <input type="number" id="strawberryCakeQuantity" min="0">
+  </div>
+
+
+
+  <div class="item">
+    <h3>Cookies</h3>
+    <p>Chocolate Chip Cookie - RM 3.99</p>
+    <label for="chocolateChipCookieQuantity">Quantity:</label>
+    <input type="number" id="chocolateChipCookieQuantity" min="0">
+    <p>Oatmeal Raisin Cookie - RM 3.49</p>
+    <label for="oatmealRaisinCookieQuantity">Quantity:</label>
+    <input type="number" id="oatmealRaisinCookieQuantity" min="0">
+    <p>Sugar Cookie - RM 2.29</p>
+    <label for="sugarCookieQuantity">Quantity:</label>
+    <input type="number" id="sugarCookieQuantity" min="0">
+  </div>
+  <button onclick = "Home()">Home</button>
+  <button onclick="calculateTotal()">Calculate Total</button>
+  <button onclick="Proceed()">Proceed</button>
+  <p class="total-price" id="totalPrice"></p>
+
+  <script>
+    function Home()
+    {
+      window.location.href = "home.html"
+      
+    }
+    function calculateTotal() {
+
+      var bagelPrices = {
+        blueberry: 5.99,
+        egg: 4.49,
+        montreal: 3.99
+      };
+
+      var cakePrices = {
+        chocolate: 29.99,
+        vanilla: 24.99,
+        strawberry: 31.99
+      };
+
+      var cookiePrices = {
+        chocolateChip: 3.99,
+        oatmealRaisin: 3.49,
+        sugar: 2.29
+      };
+      var blueberryBagelQuantity = parseInt(document.getElementById("blueberryBagelQuantity").value) || 0;
+      var eggBagelQuantity = parseInt(document.getElementById("eggBagelQuantity").value) || 0;
+      var montrealBagelQuantity = parseInt(document.getElementById("montrealBagelQuantity").value) || 0;
+
+      var chocolateCakeQuantity = parseInt(document.getElementById("chocolateCakeQuantity").value) || 0;
+      var vanillaCakeQuantity = parseInt(document.getElementById("vanillaCakeQuantity").value) || 0;
+      var strawberryCakeQuantity = parseInt(document.getElementById("strawberryCakeQuantity").value) || 0;
+
+      var chocolateChipCookieQuantity = parseInt(document.getElementById("chocolateChipCookieQuantity").value) || 0;
+      var oatmealRaisinCookieQuantity = parseInt(document.getElementById("oatmealRaisinCookieQuantity").value) || 0;
+      var sugarCookieQuantity = parseInt(document.getElementById("sugarCookieQuantity").value) || 0;
+
+      var totalPrice = (cakePrices.chocolate * chocolateCakeQuantity) +
+        (cakePrices.vanilla * vanillaCakeQuantity) +
+        (cakePrices.strawberry * strawberryCakeQuantity) +
+        (bagelPrices.blueberry * blueberryBagelQuantity) +
+        (bagelPrices.egg * eggBagelQuantity) +
+        (bagelPrices.montreal * montrealBagelQuantity) +
+        (cookiePrices.chocolateChip * chocolateChipCookieQuantity) +
+        (cookiePrices.oatmealRaisin * oatmealRaisinCookieQuantity) +
+        (cookiePrices.sugar * sugarCookieQuantity);
+
+      document.getElementById("totalPrice").innerHTML = " RM <span>" + totalPrice.toFixed(2) + "</span>";
+    }
+      function Proceed()
+      {
+window.location.href = "proceed.html"
+      }
+    
+  </script>
+</body>
+</html>
